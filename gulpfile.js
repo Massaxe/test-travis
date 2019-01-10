@@ -4,7 +4,7 @@ const {series, parallel} = require('gulp');
 
 const paths = [
   'http://localhost:3000/api/animals',
-  'http://localhost:3000/api/dogs',
+  'http://localhost:3000/api/dog',
 ];
 
 function checkPaths(cb) {
