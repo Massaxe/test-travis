@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint",
-    "test": "gulp final"
+    "test": "node . || true && gulp final"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -4,19 +4,18 @@ const {series, parallel} = require('gulp');
 
 const paths = [
   'http://localhost:3000/api/animals',
-  'http://localhost:3000/api/dog',
+  'http://localhost:3000/api/do',
 ];
 
 function checkPaths(cb) {
-  for (let i = 0; i < paths.length; i++) {
-    axios
-      .get()
-      .then(res => {})
-      .catch(err => {
-        cb(err);
-      });
-  }
-  cb();
+  axios
+    .get('http://localhost:3000/api/dogs')
+    .then(res => {
+      cb();
+    })
+    .catch(err => {
+      cb(err);
+    });
 }
 
 function checkMore(cb) {
