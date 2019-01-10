@@ -19,6 +19,10 @@ function checkPaths(cb) {
   cb();
 }
 
+function checkMore(cb) {
+  cb();
+}
+
 function transpile(cb) {
   cb();
 }
@@ -38,4 +42,4 @@ function css(cb) {
 exports.build = series(transpile, bundle);
 exports.transcend = parallel(js, css);
 exports.bothParallel = parallel(series(transpile, bundle), parallel(js, css));
-exports.final = parallel(transpile, checkPaths);
+exports.final = parallel(transpile, checkPaths, checkMore);
